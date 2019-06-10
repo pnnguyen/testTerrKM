@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY terr "http://com.example.terrorist#">
+]>
+<rdf:RDF 
+     xml:base="&terr;" 
+     xmlns="&terr;" 
+     xmlns:terr="&terr;" 
+     xmlns:owl="&owl;" 
+     xmlns:rdf="&rdf;" 
+     xmlns:rdfs="&rdfs;">
+	<owl:Ontology rdf:about="http://com.example.terrorist">
+	</owl:Ontology>
+
+	<owl:Class rdf:ID="TerroristOrganization">
+		<rdfs:label>Terrorist Organization</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:ID="ForeignTerroristOrganization">
+		<rdfs:subClassOf rdf:resource="#TerroristOrganization"/>
+		<rdfs:label>Foreign Terrorist Organization</rdfs:label>
+	</owl:Class>
+	<terr:ForeignTerroristOrganization rdf:ID="AlQaida">
+		<rdfs:label>The extremist Islamic terrorist organization, master-mind of the 9/11 attack.</rdfs:label>
+		<rdfs:comment>Al-Qaeda, alternatively spelled al-Qaida and sometimes al-Qa'ida</rdfs:comment>
+	</terr:ForeignTerroristOrganization>
+	<terr:ForeignTerroristOrganization rdf:ID="Jemaah_Islamiyah">
+		<rdfs:label>A radical Islamic group with ties to Al Qaeda in Indonesia.</rdfs:label>
+		<rdfs:comment>http://en.wikipedia.org/wiki/Jemaah_Islamiyah</rdfs:comment>
+	</terr:ForeignTerroristOrganization>
+	<!-- PN: this prop and following triples are just to illustrate manual nav.  Jena API can do the same nav programmatically. -->
+	<owl:ObjectProperty rdf:ID="hasInstance">
+		<rdfs:domain rdf:resource="&owl;Class"/>
+		<rdfs:range rdf:resource="&owl;Class"/>
+	</owl:ObjectProperty>
+	<rdf:Description rdf:about="#ForeignTerroristOrganization">
+		<terr:hasInstance rdf:resource="&terr;AlQaida"/>
+		<terr:hasInstance rdf:resource="&terr;Jemaah_Islamiyah"/>
+	</rdf:Description>
+</rdf:RDF>

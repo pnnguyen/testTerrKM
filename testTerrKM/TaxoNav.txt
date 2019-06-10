@@ -1,0 +1,4 @@
+REM Exec TaxoNav 
+REM %JAVA_HOME%\bin\java -cp ".;.\com\example\terrorist\;.\lib\commons-codec-1.6.jar;.\lib\jcl-over-slf4j-1.6.4.jar;.\lib\jena-core-2.11.1.jar;.\lib\jena-iri-1.0.1.jar;.\lib\log4j-1.2.16.jar;.\lib\slf4j-api-1.6.4.jar;.\lib\xercesImpl-2.11.0.jar;.\lib\xml-apis-1.4.01.jar;" com.example.terrorist.TaxoNav
+REM or ...
+REM %JAVA_HOME%\bin\java -cp ".;.\com\example\terrorist\;.\lib\commons-codec-1.6.jar;.\lib\jcl-over-slf4j-1.6.4.jar;.\lib\jena-core-2.11.1.jar;.\lib\jena-iri-1.0.1.jar;.\lib\log4j-1.2.16.jar;.\lib\slf4j-api-1.6.4.jar;.\lib\xercesImpl-2.11.0.jar;.\lib\xml-apis-1.4.01.jar;" com.example.terrorist.TaxoNav http://com.example.terrorist#ForeignTerroristOrganization
