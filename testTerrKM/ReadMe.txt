@@ -1,5 +1,5 @@
 #PNN 20190608: tested on Windows 10
-1. This simple 'testTerr' code illustrates a working example of using a knowledge model in RDF/OWL model.
+1. This simple 'testTerr' code illustrates a working example of using a knowledge model in RDF/OWL.
 2. The knowledge model 'terroristExample.owl' contains 'subClassOf' and 'type' relationships in a taxonomy.
 3. The Java classes ingest the RDF/OWL model, load it into memory as a Jena 2.11 (pre-Apache) ontology model, and execute.
    The 2 main execution use-cases are:
